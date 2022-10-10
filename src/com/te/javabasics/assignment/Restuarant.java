@@ -22,10 +22,18 @@ public class Restuarant {
 			System.out.println("Enter the item numbers : ");
 			for (int i = 0; i < n; i++) {
 				int item = sc.nextInt();
-				sum = sum + ar[item];
-				str[i] = st[item];
-				arr[i] = ar[item];
+				if (item > st.length) {
+					try {
+						throw new listNotAvailableException("please select within the list");
 
+					} catch (listNotAvailableException e) {
+						System.out.println(e.getMessage());
+					}
+				} else {
+					sum = sum + ar[item];
+					str[i] = st[item];
+					arr[i] = ar[item];
+				}
 			}
 			for (int i = 0; i < str.length; i++) {
 				System.out.println(str[i]);
