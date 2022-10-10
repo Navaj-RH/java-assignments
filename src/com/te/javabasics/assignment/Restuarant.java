@@ -22,7 +22,7 @@ public class Restuarant {
 			System.out.println("Enter the item numbers : ");
 			for (int i = 0; i < n; i++) {
 				int item = sc.nextInt();
-				if (item > st.length) {
+				if (item >= st.length) {
 					try {
 						throw new listNotAvailableException("please select within the list");
 
@@ -35,6 +35,7 @@ public class Restuarant {
 					arr[i] = ar[item];
 				}
 			}
+			System.out.println("the items you have selected");
 			for (int i = 0; i < str.length; i++) {
 				System.out.println(str[i]);
 			}
