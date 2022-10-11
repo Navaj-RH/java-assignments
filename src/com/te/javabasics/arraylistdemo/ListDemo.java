@@ -38,6 +38,6 @@ public class ListDemo {
 		}
 		/* ArrayList al=Collections.synchronizedList(al)<Integer>; */
 		System.out.println("-----------------------------------------");
-//		arrayList.forEach(all -> System.out.println(all));
+		arrayList.forEach(all -> System.out.println(all));
 	}
 }
